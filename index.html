@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/qgis2web.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css" />
+    <link rel="stylesheet" href="css/leaflet-measure.css" />
+    <style>
+      html,
+      body,
+      #map {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      
+      }
+    </style>
+    <title></title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- BOTTOM NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://4.bp.blogspot.com/-xHZR0kpIHTA/W_dNFTFgjxI/AAAAAAAAQQk/cJOEleTJmSAV4rifX6Lwq3ta5jcnTylugCLcBGAs/s320/BMKG.png" alt="Cuaca Ekstrim" class="w-50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#consequence">Consequence</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#map">Map</a>
+            </li>
+          </ul>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand ms-lg-3">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SLIDER -->
+    <div class="owl-carousel owl-theme hero-slider">
+      <div class="slide slide1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center text-white">
+              <h6 class="text-white text-uppercase">Kota Yogyakarta</h6>
+              <h1 class="display-3 my-4">Potensi<br />Cuaca Ekstrim</h1>
+              <div class="mt-5 d-flex">
+                <input type="text" class="from-control center-search w-50 rounded-0" id="floatingInput" placeholder="Search..." />
+
+                <button class="btn btn-light btn-sm justify-content-md-end mx-2 px-3 rounded-0"><i class="fas fa-search"></i>Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 text-white">
+              <h6 class="text-white text-uppercase">Potensi Cuaca Ekstrim</h6>
+              <h1 class="display-3 my-4">Kota <br />Yogyakarta</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="bg-light" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro">
+              <h6>About</h6>
+              <h1>Tentang Cuaca Ekstrim</h1>
+              <p class="mx-auto">
+                Potensi cuaca ekstrem merujuk pada kejadian cuaca yang tidak biasa atau jarang terjadi, yang memiliki potensi menimbulkan bencana alam, menghancurkan tatanan kehidupan sosial, atau yang menimbukan korban jiwa manusia. Cuaca
+                ekstrem dapat berupa fenomena cuaca atau iklim yang tidak biasa, seperti angin puting beliung, hujan lebat, kekeringan, cuaca buruk, dan angin kencang.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 py-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="info-box">
+                  <img src="img/icon6.png" alt="" />
+                  <div class="ms-4">
+                    <h5>Cuaca Yogyakarta</h5>
+                    <p>
+                      Wilayah Daerah Istimewa Yogyakarta (DIY) dapat mengalami cuaca ekstrem dalam beberapa hari ke depan, dengan prediksi hujan lebat dan angin kencang.Prakiraan ini berasal dari hasil analisis dinamika atmosfer terkini
+                      oleh Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) Stasiun Meteorologi Yogyakarta. Angin bertiup dari arah Barat Daya menuju Barat Laut dengan kecepatan berkisar 20 - 40 km/jam.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Yogyakarta_Indonesia_Tugu-Yogyakarta-02.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro">
+              <h6>Our Services</h6>
+              <h1>What We Do?</h1>
+              <p class="mx-auto">BMKG Beri Tips Menghadapi Cuaca Ekstrim untuk Keselamatan Diri!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img src="https://www.smadwiwarna.sch.id/wp-content/uploads/2022/12/cara-belajar-agar-cepat-paham-dan-ingat.webp" alt="" />
+              <h5>Tidak aktivitas di tempat yang rawan</h5>
+              <p>
+                Tempat yang rawan misalnya seperti di bawah pohon, baliho, dan sebagainya yang rentan roboh akibat tiupan angin kencang. Jadi hindari untuk beraktivitas, baik berteduh ataupun memarkirkan kendaraan di bawah tempat yang rawan
+                tersebut.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img src="https://png.pngtree.com/element_our/png_detail/20190102/isolate-trees-on-white-background-collection-of-trees-png_305067.jpg" alt="" />
+              <h5>Tidak berteduh di bawah pohon</h5>
+              <p>
+                Tidak berteduh di bawah pohon ini tidak dianjutkan bila terjadi hujan disertai angin kencang. Pohon tidak disarankan untuk jadi tempat berteduh apalagi pohon yang besar atau rindang, karena pohon tersebut rentan tumbang.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img
+                src="https://cdn0-production-images-kly.akamaized.net/qhNFBHeUGuNzsLv-OaMgr-Zad2Y=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4103648/original/083149600_1658979625-19305.jpg"
+                alt=""
+              />
+              <h5>Menjaga kebugaran tubuh</h5>
+              <p>
+                Menjaga kebugaran bisa dilakukan dengan berbagai cara, dari mulai rutin berolah raga sampai mengonsumsi makanan yang sehat. Dengan menjaga kesehatan dan kebugaran, tubuh kita akan lebih kuat dalam menghadapi cuaca ekstrem.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img src="https://suaraaisyiyah.id/wp-content/uploads/2021/08/menjaga-lingkungan.jpg" alt="" />
+              <h5>Menjaga kebersihan</h5>
+              <p>
+                Jagalah kebersihan baik kebersihan diri maupun kebersihan lingkungan. Pastikan jangan ada air menggenang, sampah menumpuk, serta air selokan harus mengalir dan bebas dari sampah, supaya terhindar dari bencana
+                hidrometeorologi.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img src="https://ceriapedia.com/wp-content/uploads/2023/05/6-manfaat-minum-air-putih-bagi-kesehatan-background.webp" alt="" />
+              <h5>Minum air putih</h5>
+              <p>Perbanyak konsumsi air putih saat cuaca panas. Air putih sangat penting karena dapat membantu mencegah terjadinya dehidrasi. saat kekeringan rasa haus akan sering mudah menyerang</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKYVCHjzRatsdAD9LR73TDJZarSn4gGTKklXypYQxaCKseUpUTIanPVYNemLd-WxXy56Y&usqp=CAU" alt="" />
+              <h5>Waspada potensi bencana</h5>
+              <p>Bencana hidrometeorologi merupakan bencana yang disebabkan karena faktor cuaca. Hal yang biasa terjadi adalah banjir, khususnya bagi masyarakat yang tinggal dan berada di daerah rawan bencana hidrometeorologi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light" id="consequence">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro">
+              <h6>Akibat</h6>
+              <h1>Cuaca Ekstrim</h1>
+              <p class="mx-auto">Beberapa dampak bancana yang disebabkan terjadinya Cuaca Ekstrim</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="projects-slider" class="owl-theme owl-carousel">
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1582462753/akmhdxpipxdnftzao1ry.gif" alt="" />
+          <div class="content">
+            <h2>Tanah Longsor</h2>
+            <h6>Dampak Cuaca Ekstrim</h6>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1578549233/pranwf26ci09qlyah8ia.gif" alt="" />
+          <div class="content">
+            <h2>Banjir</h2>
+            <h6>Dampak Cuaca Ekstrim</h6>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1538148381/rbm7ryhumx4k35bgahre.gif" alt="" />
+          <div class="content">
+            <h2>Gempa Bumi dan Tsunami</h2>
+            <h6>Dampak Cuaca Ekstrim</h6>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1571987271/mckvkgytabjyjyx4qtwi.gif" alt="" />
+          <div class="content">
+            <h2>Kebakaran Hutan</h2>
+            <h6>Dampak Cuaca Ekstrim</h6>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1508750436/wdllr9apxwmzgj0uksp9.gif" alt="" />
+          <div class="content">
+            <h2>Tornado</h2>
+            <h6>Dampak Cuaca Ekstrim</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light" id="reviews">
+      <div class="owl-theme owl-carousel reviews-slider container">
+        <div class="review">
+          <div class="person">
+            <h5>Warjono</h5>
+            <small>Kepala Stasiun Meteorologi BMKG Yogyakarta</small>
+          </div>
+          <h3>Mengimbau masyarakat agar tetap waspada terhadap potensi cuaca ekstrem yang berpotensi menimbulkan bencana hidrometeorologi berupa banjir, tanah longsor, angin kencang dan puting beliung</h3>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+        <div class="review">
+          <div class="person">
+            <h5>Kraningtyas</h5>
+            <small>Kepala Stasiun Klimatologi BMKG DIY</small>
+          </div>
+          <h3>
+            Pada periode peralihan musim pada akhir Oktober sampai pertengahan November 2023, perlu diwaspadai cuaca ekstrem, seperti hujan lebat, angin kencang, puting beliung, dan potensi hujan es yang bisa terjadi pada periode tersebut
+          </h3>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+        <div class="review">
+          <div class="person">
+            <h5>M.Nurhadi</h5>
+            <small>Analis Cuaca Stasiun Meteorologi Yogyakarta</small>
+          </div>
+          <h3>
+            Stasiun Meteorologi YIA menghimbau kepada masyarakat dan instansi terkait agar tetap waspada terhadap potensi cuaca ekstrem berupa hujan sedang hingga lebat yang disertai dengan kilat atau petir dan angin kencang hingga sepekan
+            ke depan
+          </h3>
+          <i class="bx bxs-quote-alt-left"></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro">
+              <h6>Blog</h6>
+              <h1>Blog Posts</h1>
+              <p class="mx-auto">Berikut ini merupakan beberapa berita atau peristiwa yang terjadi akibat cuaca ekstrim di yogyakarta, sebagai berikut:</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <article class="blog-post">
+              <img src="https://cdn.idntimes.com/content-images/post/20240209/compress-20231111-190504-4946-53523de36cd4ad79e5a0161ebce260f6_600x400.jpg" alt="" />
+              <a href="https://jogja.idntimes.com/news/jogja/herlambang-jati-kusumo/ratusan-pohon-hingga-1-orang-luka-berat-akibat-cuaca-ekstrem-di-jogja">Baca Selengkapnya</a>
+              <div class="content">
+                <small>15 Mar 2024, 13:11</small>
+                <h5>Pohon Tumbang</h5>
+                <p>
+                  Badan Penanggulangan Bencana Daerah Daerah Istimewa Yogyakarta (BPBD DIY) mencatat kerusakan akibat bencana cuaca ekstrem di sejumlah wilayah DIY, yang terjadi Kamis (14/3/2024) siang hingga sore. Di antaranya beberapa
+                  pohon tumbang, bangunan rumah rusak hingga satu orang terluka.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="blog-post">
+              <img src="https://imgcdn.solopos.com/@space/2012/10/2Dgk8Doy-hujan-ilustrasi-Dwi-Prasetya.jpg" alt="" />
+              <a href="https://jogja.solopos.com/waspada-cuaca-ekstrem-berpotensi-terjang-yogyakarta-sepekan-ke-depan-1834396">Baca Selengkapnya</a>
+              <div class="content">
+                <small>05 Jan 2024, 16:20</small>
+                <h5>Hujan disertai angin kencang</h5>
+                <p>
+                  Cuaca ekstrem berupa hujan dengan intensitas sedang hingga deras disertai angin kencang dan petir diperkirakan menerjang wilayah Daerah Istimewa Yogyakarta selama sepekan ke depan. Untuk itu, masyarakat diminta waspada
+                  terhadap bencana yang ditimbulkan dari cuaca ekstrem tersebut
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="blog-post">
+              <img src="https://static.republika.co.id/uploads/images/inpicture_slide/007937300-1672220332-830-556.jpg" alt="" />
+              <a href="#" class="tag">Marketing</a>
+              <div class="content">
+                <small>16 Sep 2023, 13:35</small>
+                <h5>Peralihan musim</h5>
+                <p>
+                  Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) Daerah Istimewa Yogyakarta (DIY) mengimbau masyarakat mewaspadai cuaca ekstrem pada peralihan musim kemarau ke musim hujan. Potensi cuaca ekstrem diperkirakan terjadi
+                  pada akhir Oktober hingga pertengahan November 2023.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MILESTONE -->
+    <section id="milestone">
+      <div class="container">
+        <div class="row text-center justify-content-center gy-4">
+          <div class="col-lg-2 col-sm-6">
+            <h1 class="display-4">Kota Yogyakarta</h1>
+            <p class="mb-0">Location</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="container-fluid">
+              <div class="row gy-4">
+                <div class="col-lg-4 col-sm-12 bg-cover"></div> <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97085682055!2d110.33355888931258!3d-7.8032484491086125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1713193960513!5m2!1sid!2sid"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+                </div>
+                <div class="col-lg-8">
+                  <form class="p-lg-5 col-12 row g-3">
+                    <div>
+                      <h1>Get in touch</h1>
+                      <p>Berikan Pesan dan Kritikan anda</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="userName" class="form-label">First name</label>
+                      <input type="text" class="form-control" placeholder="Masukkan nama depan anda" id="userName" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="userName" class="form-label">Last name</label>
+                      <input type="text" class="form-control" placeholder="Masukkan nama belakang anda" id="userName" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="col-12">
+                      <label for="userName" class="form-label">Email address</label>
+                      <input type="email" class="form-control" placeholder="Masukkan email anda" id="userName" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="col-12">
+                      <label for="exampleInputEmail1" class="form-label">Enter Message</label>
+                      <textarea name="" placeholder="Ketik pesan dan saran" class="form-control" id="" rows="4"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-brand">Send Message</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <div id="map"></div>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+    <script src="js/leaflet-measure.js"></script>
+    <script src="data/Kota_Yogyakarta_1.js"></script>
+    <script src="data/PotensiCuacaEkstrem_2.js"></script>
+    <script src="data/Sungai_3.js"></script>
+    <script src="data/Jalan_4.js"></script>
+    <script src="data/PenggunaanLahan_5.js"></script>
+    <script src="data/Pemerintahan_6.js"></script>
+    <script>
+      var map = L.map("map", {
+        zoomControl: true,
+        maxZoom: 28,
+        minZoom: 1,
+      }).fitBounds([
+        [-7.841874651822644, 110.3170094450947],
+        [-7.756525697194648, 110.46516027226475],
+      ]);
+      var hash = new L.Hash(map);
+      map.attributionControl.setPrefix(
+        '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>'
+      );
+      var autolinker = new Autolinker({ truncate: { length: 30, location: "smart" } });
+      function removeEmptyRowsFromPopupContent(content, feature) {
+        var tempDiv = document.createElement("div");
+        tempDiv.innerHTML = content;
+        var rows = tempDiv.querySelectorAll("tr");
+        for (var i = 0; i < rows.length; i++) {
+          var td = rows[i].querySelector("td.visible-with-data");
+          var key = td ? td.id : "";
+          if (td && td.classList.contains("visible-with-data") && feature.properties[key] == null) {
+            rows[i].parentNode.removeChild(rows[i]);
+          }
+        }
+        return tempDiv.innerHTML;
+      }
+      document.querySelector(".leaflet-popup-pane").addEventListener(
+        "load",
+        function (event) {
+          var tagName = event.target.tagName,
+            popup = map._popup;
+          // Also check if flag is already set.
+          if (tagName === "IMG" && popup && !popup._updated) {
+            popup._updated = true; // Set flag to prevent looping.
+            popup.update();
+          }
+        },
+        true
+      );
+      var measureControl = new L.Control.Measure({
+        position: "topleft",
+        primaryLengthUnit: "meters",
+        secondaryLengthUnit: "kilometers",
+        primaryAreaUnit: "sqmeters",
+        secondaryAreaUnit: "hectares",
+      });
+      measureControl.addTo(map);
+      document.getElementsByClassName("leaflet-control-measure-toggle")[0].innerHTML = "";
+      document.getElementsByClassName("leaflet-control-measure-toggle")[0].className += " fas fa-ruler";
+      var bounds_group = new L.featureGroup([]);
+      function setBounds() {}
+      map.createPane("pane_OSMStandard_0");
+      map.getPane("pane_OSMStandard_0").style.zIndex = 400;
+      var layer_OSMStandard_0 = L.tileLayer("http://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        pane: "pane_OSMStandard_0",
+        opacity: 1.0,
+        attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+        minZoom: 1,
+        maxZoom: 28,
+        minNativeZoom: 0,
+        maxNativeZoom: 19,
+      });
+      layer_OSMStandard_0;
+      map.addLayer(layer_OSMStandard_0);
+      function pop_Kota_Yogyakarta_1(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDPPUM"] !== null ? autolinker.link(feature.properties["KDPPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMOBJ"] !== null ? autolinker.link(feature.properties["NAMOBJ"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDPBPS"] !== null ? autolinker.link(feature.properties["KDPBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LUASWH"] !== null ? autolinker.link(feature.properties["LUASWH"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["UUPP"] !== null ? autolinker.link(feature.properties["UUPP"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDEBPS"] !== null ? autolinker.link(feature.properties["KDEBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDEPUM"] !== null ? autolinker.link(feature.properties["KDEPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDCBPS"] !== null ? autolinker.link(feature.properties["KDCBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDCPUM"] !== null ? autolinker.link(feature.properties["KDCPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDBBPS"] !== null ? autolinker.link(feature.properties["KDBBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDBPUM"] !== null ? autolinker.link(feature.properties["KDBPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKD"] !== null ? autolinker.link(feature.properties["WADMKD"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKD"] !== null ? autolinker.link(feature.properties["WIADKD"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKC"] !== null ? autolinker.link(feature.properties["WADMKC"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKC"] !== null ? autolinker.link(feature.properties["WIADKC"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKK"] !== null ? autolinker.link(feature.properties["WADMKK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKK"] !== null ? autolinker.link(feature.properties["WIADKK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMPR"] !== null ? autolinker.link(feature.properties["WADMPR"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADPR"] !== null ? autolinker.link(feature.properties["WIADPR"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["TIPADM"] !== null ? autolinker.link(feature.properties["TIPADM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Leng"] !== null ? autolinker.link(feature.properties["SHAPE_Leng"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Area"] !== null ? autolinker.link(feature.properties["SHAPE_Area"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_Kota_Yogyakarta_1_0() {
+        return {
+          pane: "pane_Kota_Yogyakarta_1",
+          opacity: 1,
+          color: "rgba(35,35,35,1.0)",
+          dashArray: "",
+          lineCap: "butt",
+          lineJoin: "miter",
+          weight: 1.0,
+          fill: true,
+          fillOpacity: 1,
+          fillColor: "rgba(178,223,138,1.0)",
+          interactive: true,
+        };
+      }
+      map.createPane("pane_Kota_Yogyakarta_1");
+      map.getPane("pane_Kota_Yogyakarta_1").style.zIndex = 401;
+      map.getPane("pane_Kota_Yogyakarta_1").style["mix-blend-mode"] = "normal";
+      var layer_Kota_Yogyakarta_1 = new L.geoJson(json_Kota_Yogyakarta_1, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_Kota_Yogyakarta_1",
+        layerName: "layer_Kota_Yogyakarta_1",
+        pane: "pane_Kota_Yogyakarta_1",
+        onEachFeature: pop_Kota_Yogyakarta_1,
+        style: style_Kota_Yogyakarta_1_0,
+      });
+      bounds_group.addLayer(layer_Kota_Yogyakarta_1);
+      map.addLayer(layer_Kota_Yogyakarta_1);
+      function pop_PotensiCuacaEkstrem_2(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDPPUM"] !== null ? autolinker.link(feature.properties["KDPPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NAMOBJ</th>\
+                        <td>' +
+          (feature.properties["NAMOBJ"] !== null ? autolinker.link(feature.properties["NAMOBJ"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LUASWH"] !== null ? autolinker.link(feature.properties["LUASWH"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["UUPP"] !== null ? autolinker.link(feature.properties["UUPP"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDEBPS"] !== null ? autolinker.link(feature.properties["KDEBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDEPUM"] !== null ? autolinker.link(feature.properties["KDEPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDCBPS"] !== null ? autolinker.link(feature.properties["KDCBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDCPUM"] !== null ? autolinker.link(feature.properties["KDCPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDBBPS"] !== null ? autolinker.link(feature.properties["KDBBPS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KDBPUM"] !== null ? autolinker.link(feature.properties["KDBPUM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKD"] !== null ? autolinker.link(feature.properties["WADMKD"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKD"] !== null ? autolinker.link(feature.properties["WIADKD"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKC"] !== null ? autolinker.link(feature.properties["WADMKC"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKC"] !== null ? autolinker.link(feature.properties["WIADKC"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMKK"] !== null ? autolinker.link(feature.properties["WADMKK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADKK"] !== null ? autolinker.link(feature.properties["WIADKK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WADMPR"] !== null ? autolinker.link(feature.properties["WADMPR"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WIADPR"] !== null ? autolinker.link(feature.properties["WIADPR"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["TIPADM"] !== null ? autolinker.link(feature.properties["TIPADM"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Leng"] !== null ? autolinker.link(feature.properties["SHAPE_Leng"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Area"] !== null ? autolinker.link(feature.properties["SHAPE_Area"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["Cuaca"] !== null ? autolinker.link(feature.properties["Cuaca"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_PotensiCuacaEkstrem_2_0(feature) {
+        switch (String(feature.properties["Cuaca"])) {
+          case "Rendah":
+            return {
+              pane: "pane_PotensiCuacaEkstrem_2",
+              opacity: 1,
+              color: "rgba(35,35,35,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 1.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(51,160,44,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Sedang":
+            return {
+              pane: "pane_PotensiCuacaEkstrem_2",
+              opacity: 1,
+              color: "rgba(35,35,35,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 1.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(235,255,13,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Tinggi":
+            return {
+              pane: "pane_PotensiCuacaEkstrem_2",
+              opacity: 1,
+              color: "rgba(35,35,35,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 1.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(227,26,28,1.0)",
+              interactive: true,
+            };
+            break;
+        }
+      }
+      map.createPane("pane_PotensiCuacaEkstrem_2");
+      map.getPane("pane_PotensiCuacaEkstrem_2").style.zIndex = 402;
+      map.getPane("pane_PotensiCuacaEkstrem_2").style["mix-blend-mode"] = "normal";
+      var layer_PotensiCuacaEkstrem_2 = new L.geoJson(json_PotensiCuacaEkstrem_2, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_PotensiCuacaEkstrem_2",
+        layerName: "layer_PotensiCuacaEkstrem_2",
+        pane: "pane_PotensiCuacaEkstrem_2",
+        onEachFeature: pop_PotensiCuacaEkstrem_2,
+        style: style_PotensiCuacaEkstrem_2_0,
+      });
+      bounds_group.addLayer(layer_PotensiCuacaEkstrem_2);
+      map.addLayer(layer_PotensiCuacaEkstrem_2);
+      function pop_Sungai_3(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMOBJ"] !== null ? autolinker.link(feature.properties["NAMOBJ"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["TIPSNG"] !== null ? autolinker.link(feature.properties["TIPSNG"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KLSSNG"] !== null ? autolinker.link(feature.properties["KLSSNG"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMWS"] !== null ? autolinker.link(feature.properties["NAMWS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMDAS"] !== null ? autolinker.link(feature.properties["NAMDAS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["STATUS"] !== null ? autolinker.link(feature.properties["STATUS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WMAX"] !== null ? autolinker.link(feature.properties["WMAX"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["DBTMAX"] !== null ? autolinker.link(feature.properties["DBTMAX"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SLPRT"] !== null ? autolinker.link(feature.properties["SLPRT"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Leng"] !== null ? autolinker.link(feature.properties["SHAPE_Leng"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_Sungai_3_0() {
+        return {
+          pane: "pane_Sungai_3",
+          opacity: 1,
+          color: "rgba(31,120,180,1.0)",
+          dashArray: "",
+          lineCap: "square",
+          lineJoin: "bevel",
+          weight: 3.0,
+          fillOpacity: 0,
+          interactive: true,
+        };
+      }
+      map.createPane("pane_Sungai_3");
+      map.getPane("pane_Sungai_3").style.zIndex = 403;
+      map.getPane("pane_Sungai_3").style["mix-blend-mode"] = "normal";
+      var layer_Sungai_3 = new L.geoJson(json_Sungai_3, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_Sungai_3",
+        layerName: "layer_Sungai_3",
+        pane: "pane_Sungai_3",
+        onEachFeature: pop_Sungai_3,
+        style: style_Sungai_3_0,
+      });
+      bounds_group.addLayer(layer_Sungai_3);
+      map.addLayer(layer_Sungai_3);
+      function pop_Jalan_4(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMRJL"] !== null ? autolinker.link(feature.properties["NAMRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KONRJL"] !== null ? autolinker.link(feature.properties["KONRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["MATRJL"] !== null ? autolinker.link(feature.properties["MATRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FGSRJL"] !== null ? autolinker.link(feature.properties["FGSRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["UTKRJL"] !== null ? autolinker.link(feature.properties["UTKRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["TOLRJL"] !== null ? autolinker.link(feature.properties["TOLRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["WLYRJL"] !== null ? autolinker.link(feature.properties["WLYRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["AUTRJL"] !== null ? autolinker.link(feature.properties["AUTRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KLSRJL"] !== null ? autolinker.link(feature.properties["KLSRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SPCRJL"] !== null ? autolinker.link(feature.properties["SPCRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["JPARJL"] !== null ? autolinker.link(feature.properties["JPARJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["ARHRJL"] !== null ? autolinker.link(feature.properties["ARHRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["STARJL"] !== null ? autolinker.link(feature.properties["STARJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KLLRJL"] !== null ? autolinker.link(feature.properties["KLLRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["MEDRJL"] !== null ? autolinker.link(feature.properties["MEDRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LOCRJL"] !== null ? autolinker.link(feature.properties["LOCRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["JARRJL"] !== null ? autolinker.link(feature.properties["JARRJL"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Leng"] !== null ? autolinker.link(feature.properties["SHAPE_Leng"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_Jalan_4_0() {
+        return {
+          pane: "pane_Jalan_4",
+          opacity: 1,
+          color: "rgba(146,71,0,1.0)",
+          dashArray: "",
+          lineCap: "square",
+          lineJoin: "bevel",
+          weight: 1.0,
+          fillOpacity: 0,
+          interactive: true,
+        };
+      }
+      map.createPane("pane_Jalan_4");
+      map.getPane("pane_Jalan_4").style.zIndex = 404;
+      map.getPane("pane_Jalan_4").style["mix-blend-mode"] = "normal";
+      var layer_Jalan_4 = new L.geoJson(json_Jalan_4, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_Jalan_4",
+        layerName: "layer_Jalan_4",
+        pane: "pane_Jalan_4",
+        onEachFeature: pop_Jalan_4,
+        style: style_Jalan_4_0,
+      });
+      bounds_group.addLayer(layer_Jalan_4);
+      map.addLayer(layer_Jalan_4);
+      function pop_PenggunaanLahan_5(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMOBJ"] !== null ? autolinker.link(feature.properties["NAMOBJ"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["JNSSWH"] !== null ? autolinker.link(feature.properties["JNSSWH"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["AQDATE"] !== null ? autolinker.link(feature.properties["AQDATE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["PUDATE"] !== null ? autolinker.link(feature.properties["PUDATE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["KODLCO"] !== null ? autolinker.link(feature.properties["KODLCO"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["TNMSWH"] !== null ? autolinker.link(feature.properties["TNMSWH"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Leng"] !== null ? autolinker.link(feature.properties["SHAPE_Leng"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SHAPE_Area"] !== null ? autolinker.link(feature.properties["SHAPE_Area"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_PenggunaanLahan_5_0() {
+        return {
+          pane: "pane_PenggunaanLahan_5",
+          opacity: 1,
+          color: "rgba(35,35,35,1.0)",
+          dashArray: "",
+          lineCap: "butt",
+          lineJoin: "miter",
+          weight: 1.0,
+          fill: true,
+          fillOpacity: 1,
+          fillColor: "rgba(178,226,22,1.0)",
+          interactive: true,
+        };
+      }
+      map.createPane("pane_PenggunaanLahan_5");
+      map.getPane("pane_PenggunaanLahan_5").style.zIndex = 405;
+      map.getPane("pane_PenggunaanLahan_5").style["mix-blend-mode"] = "normal";
+      var layer_PenggunaanLahan_5 = new L.geoJson(json_PenggunaanLahan_5, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_PenggunaanLahan_5",
+        layerName: "layer_PenggunaanLahan_5",
+        pane: "pane_PenggunaanLahan_5",
+        onEachFeature: pop_PenggunaanLahan_5,
+        style: style_PenggunaanLahan_5_0,
+      });
+      bounds_group.addLayer(layer_PenggunaanLahan_5);
+      map.addLayer(layer_PenggunaanLahan_5);
+      function pop_Pemerintahan_6(feature, layer) {
+        var popupContent =
+          '<table>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["NAMOBJ"] !== null ? autolinker.link(feature.properties["NAMOBJ"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FGSGOV"] !== null ? autolinker.link(feature.properties["FGSGOV"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LUAS"] !== null ? autolinker.link(feature.properties["LUAS"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["FCODE"] !== null ? autolinker.link(feature.properties["FCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">REMARK</th>\
+                        <td>' +
+          (feature.properties["REMARK"] !== null ? autolinker.link(feature.properties["REMARK"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["SRS_ID"] !== null ? autolinker.link(feature.properties["SRS_ID"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["LCODE"] !== null ? autolinker.link(feature.properties["LCODE"].toLocaleString()) : "") +
+          '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' +
+          (feature.properties["METADATA"] !== null ? autolinker.link(feature.properties["METADATA"].toLocaleString()) : "") +
+          "</td>\
+                    </tr>\
+                </table>";
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+        var popup = layer.getPopup();
+        var content = popup.getContent();
+        var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+        popup.setContent(updatedContent);
+      }
+
+      function style_Pemerintahan_6_0(feature) {
+        switch (String(feature.properties["REMARK"])) {
+          case "Kantor Camat":
+            return {
+              pane: "pane_Pemerintahan_6",
+              radius: 4.0,
+              opacity: 1,
+              color: "rgba(255,255,255,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 2.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(212,97,232,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Kantor Gubernur":
+            return {
+              pane: "pane_Pemerintahan_6",
+              radius: 4.0,
+              opacity: 1,
+              color: "rgba(255,255,255,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 2.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(236,220,114,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Kantor Lurah":
+            return {
+              pane: "pane_Pemerintahan_6",
+              radius: 4.0,
+              opacity: 1,
+              color: "rgba(255,255,255,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 2.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(239,140,153,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Kantor Polisi":
+            return {
+              pane: "pane_Pemerintahan_6",
+              radius: 4.0,
+              opacity: 1,
+              color: "rgba(255,255,255,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 2.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(53,80,232,1.0)",
+              interactive: true,
+            };
+            break;
+          case "Kantor Wali Kota":
+            return {
+              pane: "pane_Pemerintahan_6",
+              radius: 4.0,
+              opacity: 1,
+              color: "rgba(255,255,255,1.0)",
+              dashArray: "",
+              lineCap: "butt",
+              lineJoin: "miter",
+              weight: 2.0,
+              fill: true,
+              fillOpacity: 1,
+              fillColor: "rgba(67,205,184,1.0)",
+              interactive: true,
+            };
+            break;
+        }
+      }
+      map.createPane("pane_Pemerintahan_6");
+      map.getPane("pane_Pemerintahan_6").style.zIndex = 406;
+      map.getPane("pane_Pemerintahan_6").style["mix-blend-mode"] = "normal";
+      var layer_Pemerintahan_6 = new L.geoJson(json_Pemerintahan_6, {
+        attribution: "",
+        interactive: true,
+        dataVar: "json_Pemerintahan_6",
+        layerName: "layer_Pemerintahan_6",
+        pane: "pane_Pemerintahan_6",
+        onEachFeature: pop_Pemerintahan_6,
+        pointToLayer: function (feature, latlng) {
+          var context = {
+            feature: feature,
+            variables: {},
+          };
+          return L.circleMarker(latlng, style_Pemerintahan_6_0(feature));
+        },
+      });
+      bounds_group.addLayer(layer_Pemerintahan_6);
+      map.addLayer(layer_Pemerintahan_6);
+      var osmGeocoder = new L.Control.Geocoder({
+        collapsed: true,
+        position: "topleft",
+        text: "Search",
+        title: "Testing",
+      }).addTo(map);
+      document.getElementsByClassName("leaflet-control-geocoder-icon")[0].className += " fa fa-search";
+      document.getElementsByClassName("leaflet-control-geocoder-icon")[0].title += "Search for a place";
+      var baseMaps = {};
+      L.control
+        .layers(
+          baseMaps,
+          {
+            'Pemerintahan<br /><table><tr><td style="text-align: center;"><img src="legend/Pemerintahan_6_KantorCamat0.png" /></td><td>Kantor Camat</td></tr><tr><td style="text-align: center;"><img src="legend/Pemerintahan_6_KantorGubernur1.png" /></td><td>Kantor Gubernur</td></tr><tr><td style="text-align: center;"><img src="legend/Pemerintahan_6_KantorLurah2.png" /></td><td>Kantor Lurah</td></tr><tr><td style="text-align: center;"><img src="legend/Pemerintahan_6_KantorPolisi3.png" /></td><td>Kantor Polisi</td></tr><tr><td style="text-align: center;"><img src="legend/Pemerintahan_6_KantorWaliKota4.png" /></td><td>Kantor Wali Kota</td></tr></table>':
+              layer_Pemerintahan_6,
+            '<img src="legend/PenggunaanLahan_5.png" /> Penggunaan Lahan': layer_PenggunaanLahan_5,
+            '<img src="legend/Jalan_4.png" /> Jalan': layer_Jalan_4,
+            '<img src="legend/Sungai_3.png" /> Sungai': layer_Sungai_3,
+            'Potensi Cuaca Ekstrem<br /><table><tr><td style="text-align: center;"><img src="legend/PotensiCuacaEkstrem_2_Rendah0.png" /></td><td>Rendah</td></tr><tr><td style="text-align: center;"><img src="legend/PotensiCuacaEkstrem_2_Sedang1.png" /></td><td>Sedang</td></tr><tr><td style="text-align: center;"><img src="legend/PotensiCuacaEkstrem_2_Tinggi2.png" /></td><td>Tinggi</td></tr></table>':
+              layer_PotensiCuacaEkstrem_2,
+            '<img src="legend/Kota_Yogyakarta_1.png" /> Kota_Yogyakarta': layer_Kota_Yogyakarta_1,
+            "OSM Standard": layer_OSMStandard_0,
+          },
+          { collapsed: false }
+        )
+        .addTo(map);
+      setBounds();
+      var i = 0;
+      layer_PotensiCuacaEkstrem_2.eachLayer(function (layer) {
+        var context = {
+          feature: layer.feature,
+          variables: {},
+        };
+        layer.bindTooltip(layer.feature.properties["NAMOBJ"] !== null ? String("<div style=\"color: #323232; font-size: 10pt; font-family: 'Open Sans', sans-serif;\">" + layer.feature.properties["NAMOBJ"]) + "</div>" : "", {
+          permanent: true,
+          offset: [-0, -16],
+          className: "css_PotensiCuacaEkstrem_2",
+        });
+        labels.push(layer);
+        totalMarkers += 1;
+        layer.added = true;
+        addLabel(layer, i);
+        i++;
+      });
+      resetLabels([layer_Kota_Yogyakarta_1, layer_PotensiCuacaEkstrem_2]);
+      map.on("zoomend", function () {
+        resetLabels([layer_Kota_Yogyakarta_1, layer_PotensiCuacaEkstrem_2]);
+      });
+      map.on("layeradd", function () {
+        resetLabels([layer_Kota_Yogyakarta_1, layer_PotensiCuacaEkstrem_2]);
+      });
+      map.on("layerremove", function () {
+        resetLabels([layer_Kota_Yogyakarta_1, layer_PotensiCuacaEkstrem_2]);
+      });
+    </script>
+
+    <footer>
+      <div class="footer-top text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h4 class="navbar-brand">Weather Extreme<span class="dot">.</span></h4>
+              <div class="col-auto social-icons">
+                <a href="https://www.linkedin.com/in/winda-yuliana-183954286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/windaaaayy_?igsh=MTV6Y3U2ajVraXM3ag=="><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">Copyright Winda Yuliana</p>
+      </div>
+    </footer>
+  </body>
+</html>
